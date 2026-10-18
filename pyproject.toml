@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crash2scenario"
+version = "1.0.0"
+description = "Scenario generation for ADS testing from NHTSA crash records (arXiv:2606.31131)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+  "metadrive-simulator==0.4.3",
+  "numpy",
+  "pandas",
+  "scikit-learn",
+  "matplotlib",
+  "sentence-transformers",
+  "joblib",
+  "openai",
+  "python-dotenv",
+  "imageio",
+  "gymnasium",
+  "Pillow",
+]
+
+[project.scripts]
+crash2scenario = "crash2scenario.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["crash2scenario*"]

@@ -1,0 +1,88 @@
+{
+  "cluster_index": 16,
+  "road_type": "Intersection",
+  "sv_precrash": "Proceeding Straight",
+  "cp_precrash": "Proceeding Straight",
+  "work_zone": "No",
+  "narrative": "On March [XXX], 2025 at 6:18 PM local time, a Waymo autonomous vehicle (AV) was proceeding straight through a signalized intersection in its lane at a steady target speed. A crash partner vehicle approached the same intersection from the cross street and also proceeded straight. As the AV entered the intersection, the crash partner continued straight into the intersection at a higher speed than the available gap and did not yield, resulting in a side-impact collision within the intersection (front of the crash partner contacting the AV\u2019s right side). No work zone was present.",
+  "stage": "revised",
+  "config": {
+    "map": "X",
+    "ego_turn": "straight",
+    "lead_turn": "straight",
+    "traffic_density": 0.08,
+    "accident_prob": 0.0,
+    "steps": 360,
+    "render": {
+      "screen_size": [
+        700,
+        900
+      ],
+      "camera_position": [
+        58,
+        -52
+      ]
+    },
+    "vehicles": [
+      {
+        "id": "cross_street_runner",
+        "direction": "opposite",
+        "lane_offset": 0,
+        "delta_s_m": 12.0,
+        "delta_t_m": 0.25,
+        "policy": "accel_then_brake",
+        "params": {
+          "accel_mag": 2.4,
+          "accel_steps": 120,
+          "cruise_speed": 40.0,
+          "brake_step": 500,
+          "brake_steps": 1,
+          "speed_kp": 0.18
+        },
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    ],
+    "cones": [],
+    "agent_configs": {
+      "default_agent": {
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    }
+  },
+  "metrics": {
+    "min_ttc_s": Infinity,
+    "min_thw_s": 0.08639511466026306,
+    "min_gap_m": 0.7163521647453308,
+    "min_accel_mps2": -9.028706550598145,
+    "frac_hard_brake": 0.022900763358778626,
+    "max_abs_jerk_mps3": 59.12290573120117,
+    "frac_high_jerk": 0.09923664122137404,
+    "frac_stopped": 0.03816793893129771,
+    "max_stop_streak_s": 0.5,
+    "osc_index": 0.4710383440567554,
+    "num_panic_brakes": 0,
+    "any_collision": false,
+    "collision_step": null,
+    "collision_vehicle": false,
+    "collision_object": false,
+    "min_euclid_dist_m": 12.011360168457031,
+    "min_time_dist": 131,
+    "n_steps": 131,
+    "dt": 0.1,
+    "map": "X",
+    "traffic_density": 0.08,
+    "lead_id": "cross_street_runner",
+    "terminated": true,
+    "truncated": false,
+    "ego_turn": "straight",
+    "lead_turn": "straight",
+    "nav_module": "NodeNetworkNavigation",
+    "checkpoint_min_len": 4,
+    "ego_checkpoints_init": true,
+    "lead_checkpoints_init": true
+  }
+}

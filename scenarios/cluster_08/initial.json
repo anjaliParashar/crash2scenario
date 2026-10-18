@@ -1,0 +1,88 @@
+{
+  "cluster_index": 8,
+  "road_type": "Intersection",
+  "sv_precrash": "Making Left Turn",
+  "cp_precrash": "Making Right Turn",
+  "work_zone": "No",
+  "narrative": "At approximately 3:18 p.m. on a clear weekday afternoon, the self-driving vehicle approached a signal-controlled intersection in the southbound lane and initiated a permitted left turn to travel eastbound. At the same time, a crash partner vehicle approached the same intersection from the westbound approach and began a right turn to travel northbound. As the self-driving vehicle entered the intersection and continued its left-turn path, the crash partner vehicle rolled forward and then accelerated into its right turn, entering the intersection later than expected. The vehicles converged in the intersection turn area, and the front of the crash partner vehicle struck the right side of the self-driving vehicle during the left turn.",
+  "stage": "initial",
+  "config": {
+    "map": "X",
+    "ego_turn": "left",
+    "lead_turn": "right",
+    "traffic_density": 0.06,
+    "accident_prob": 0.0,
+    "steps": 360,
+    "render": {
+      "screen_size": [
+        700,
+        900
+      ],
+      "camera_position": [
+        60,
+        -54
+      ]
+    },
+    "vehicles": [
+      {
+        "id": "ncp_late_right_turn_accel",
+        "lane_offset": 0,
+        "delta_s_m": 32.0,
+        "delta_t_m": 0.2,
+        "direction": "opposite",
+        "policy": "accel_then_brake",
+        "params": {
+          "accel_mag": 1.2,
+          "accel_steps": 55,
+          "cruise_speed": 16.0,
+          "brake_step": 120,
+          "brake_steps": 18,
+          "speed_kp": 0.1
+        },
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    ],
+    "cones": [],
+    "agent_configs": {
+      "default_agent": {
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    }
+  },
+  "metrics": {
+    "min_ttc_s": 409.8819885253906,
+    "min_thw_s": 1.6610268354415894,
+    "min_gap_m": 13.841865539550781,
+    "min_accel_mps2": -1.1937713623046875,
+    "frac_hard_brake": 0.0,
+    "max_abs_jerk_mps3": 11.937713623046875,
+    "frac_high_jerk": 0.008403361344537815,
+    "frac_stopped": 0.0,
+    "max_stop_streak_s": 0.0,
+    "osc_index": 0.27484502923976606,
+    "num_panic_brakes": 0,
+    "any_collision": false,
+    "collision_step": null,
+    "collision_vehicle": false,
+    "collision_object": false,
+    "min_euclid_dist_m": 30.735143661499023,
+    "min_time_dist": 119,
+    "n_steps": 119,
+    "dt": 0.1,
+    "map": "X",
+    "traffic_density": 0.06,
+    "lead_id": "ncp_late_right_turn_accel",
+    "terminated": true,
+    "truncated": false,
+    "ego_turn": "left",
+    "lead_turn": "right",
+    "nav_module": "NodeNetworkNavigation",
+    "checkpoint_min_len": 4,
+    "ego_checkpoints_init": true,
+    "lead_checkpoints_init": true
+  }
+}

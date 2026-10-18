@@ -1,0 +1,100 @@
+{
+  "cluster_index": 12,
+  "road_type": "Highway / Freeway",
+  "sv_precrash": "Proceeding Straight",
+  "cp_precrash": "Proceeding Straight",
+  "work_zone": "Yes",
+  "narrative": "On April [XXX] at approximately 10:35 AM CT, the ego vehicle was traveling eastbound on a highway through an active work zone, proceeding straight in the right through-lane at a steady speed. A crash-partner SUV was traveling in the adjacent left through-lane, also proceeding straight at a similar speed. The work zone used cones to taper and narrow both lanes, reducing lateral clearance between vehicles while maintaining straight-ahead travel. As both vehicles entered the narrowed section, the crash-partner SUV tracked slightly toward the right within its lane while continuing forward, and its right side encroached into the ego vehicle\u2019s lane space. The ego vehicle and the crash-partner SUV made contact in a sideswipe along their left/right sides, respectively, while both continued proceeding straight through the coned work zone.",
+  "stage": "initial",
+  "config": {
+    "map": "S",
+    "ego_turn": "straight",
+    "lead_turn": "straight",
+    "traffic_density": 0.05,
+    "accident_prob": 0.0,
+    "steps": 420,
+    "render": {
+      "screen_size": [
+        700,
+        900
+      ],
+      "camera_position": [
+        55,
+        -52
+      ]
+    },
+    "vehicles": [
+      {
+        "id": "ncp_suv_right_encroach",
+        "direction": "same",
+        "lane_offset": 1,
+        "delta_s_m": 4.5,
+        "delta_t_m": -0.95,
+        "policy": "idm_nominal",
+        "params": {
+          "target_speed_mps": 28.5
+        },
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    ],
+    "cones": [
+      {
+        "enabled": true,
+        "lane_offset": 0,
+        "start_delta_s_m": 35.0,
+        "spacing_m": 2.5,
+        "count": 24,
+        "lateral_m": 1.35
+      },
+      {
+        "enabled": true,
+        "lane_offset": 1,
+        "start_delta_s_m": 35.0,
+        "spacing_m": 2.5,
+        "count": 24,
+        "lateral_m": -1.35
+      }
+    ],
+    "agent_configs": {
+      "default_agent": {
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    }
+  },
+  "metrics": {
+    "min_ttc_s": 0.07725408673286438,
+    "min_thw_s": 0.00386261660605669,
+    "min_gap_m": 0.03218841552734375,
+    "min_accel_mps2": 0.0,
+    "frac_hard_brake": 0.0,
+    "max_abs_jerk_mps3": 2.6826858520507812,
+    "frac_high_jerk": 0.0,
+    "frac_stopped": 0.0,
+    "max_stop_streak_s": 0.0,
+    "osc_index": 0.2451840727817416,
+    "num_panic_brakes": 0,
+    "any_collision": false,
+    "collision_step": null,
+    "collision_vehicle": false,
+    "collision_object": false,
+    "min_euclid_dist_m": 1.3698495626449585,
+    "min_time_dist": 149,
+    "n_steps": 149,
+    "dt": 0.1,
+    "map": "S",
+    "traffic_density": 0.05,
+    "lead_id": "ncp_suv_right_encroach",
+    "terminated": true,
+    "truncated": false,
+    "ego_turn": "straight",
+    "lead_turn": "straight",
+    "nav_module": "NodeNetworkNavigation",
+    "checkpoint_min_len": 4,
+    "ego_checkpoints_init": true,
+    "lead_checkpoints_init": true
+  }
+}

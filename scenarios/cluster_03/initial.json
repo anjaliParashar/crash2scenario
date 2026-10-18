@@ -1,0 +1,88 @@
+{
+  "cluster_index": 3,
+  "road_type": "Intersection",
+  "sv_precrash": "Proceeding Straight",
+  "cp_precrash": "Proceeding Straight",
+  "work_zone": "No",
+  "narrative": "On an evening in 2023, the self-driving vehicle (\u201cEgo\u201d) was traveling straight through a signalized four-way intersection on a steady approach speed with the traffic signal indicating a permissive phase for Ego to proceed. A passenger vehicle (\u201cCrash Partner\u201d) approached the same intersection from the cross street and continued straight into the intersection against its signal. As the Crash Partner entered the intersection, it briefly accelerated and then abruptly braked while still within the conflict zone, reducing the available gap. Ego initiated braking but, due to the late incursion and the Crash Partner\u2019s sudden deceleration in the intersection, Ego was unable to fully avoid the crossing vehicle and the vehicles collided in the intersection in a right-angle (side-impact) configuration.",
+  "stage": "initial",
+  "config": {
+    "map": "X",
+    "ego_turn": "straight",
+    "lead_turn": "straight",
+    "traffic_density": 0.05,
+    "accident_prob": 0.0,
+    "steps": 320,
+    "render": {
+      "screen_size": [
+        700,
+        900
+      ],
+      "camera_position": [
+        60,
+        -54
+      ]
+    },
+    "vehicles": [
+      {
+        "id": "cross_runner_accel_then_brake",
+        "direction": "opposite",
+        "lane_offset": 0,
+        "delta_s_m": 34.0,
+        "delta_t_m": 0.0,
+        "policy": "accel_then_brake",
+        "params": {
+          "accel_mag": 0.9,
+          "accel_steps": 35,
+          "cruise_speed": 6.0,
+          "brake_step": 78,
+          "brake_steps": 55,
+          "speed_kp": 0.12
+        },
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    ],
+    "cones": [],
+    "agent_configs": {
+      "default_agent": {
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    }
+  },
+  "metrics": {
+    "min_ttc_s": 0.017855366691946983,
+    "min_thw_s": 0.017852967604994774,
+    "min_gap_m": 0.14762091636657715,
+    "min_accel_mps2": -12.369894981384277,
+    "frac_hard_brake": 0.02727272727272727,
+    "max_abs_jerk_mps3": 123.70085906982422,
+    "frac_high_jerk": 0.09090909090909091,
+    "frac_stopped": 0.0,
+    "max_stop_streak_s": 0.0,
+    "osc_index": 0.2858065405690565,
+    "num_panic_brakes": 0,
+    "any_collision": false,
+    "collision_step": null,
+    "collision_vehicle": false,
+    "collision_object": false,
+    "min_euclid_dist_m": 22.786582946777344,
+    "min_time_dist": 110,
+    "n_steps": 110,
+    "dt": 0.1,
+    "map": "X",
+    "traffic_density": 0.05,
+    "lead_id": "cross_runner_accel_then_brake",
+    "terminated": true,
+    "truncated": false,
+    "ego_turn": "straight",
+    "lead_turn": "straight",
+    "nav_module": "NodeNetworkNavigation",
+    "checkpoint_min_len": 4,
+    "ego_checkpoints_init": true,
+    "lead_checkpoints_init": true
+  }
+}

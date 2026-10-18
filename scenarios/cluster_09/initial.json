@@ -1,0 +1,87 @@
+{
+  "cluster_index": 9,
+  "road_type": "Intersection",
+  "sv_precrash": "Proceeding Straight",
+  "cp_precrash": "Proceeding Straight",
+  "work_zone": "No",
+  "narrative": "On March [XXX], 2024 at 4:22 PM PT, the ego vehicle was proceeding straight northbound through a signalized intersection at a steady speed. A crash partner vehicle was proceeding straight eastbound on the cross street toward the same intersection. As the ego vehicle entered the intersection, the crash partner continued straight into the intersection against the traffic control and did not yield. The ego vehicle applied braking but was unable to avoid contact, resulting in a side-impact collision within the intersection.",
+  "stage": "initial",
+  "config": {
+    "map": "X",
+    "ego_turn": "straight",
+    "lead_turn": "straight",
+    "traffic_density": 0.05,
+    "accident_prob": 0.0,
+    "steps": 360,
+    "render": {
+      "screen_size": [
+        700,
+        900
+      ],
+      "camera_position": [
+        60,
+        -54
+      ]
+    },
+    "vehicles": [
+      {
+        "id": "ncp_red_light_runner",
+        "lane_offset": 0,
+        "delta_s_m": 42.0,
+        "delta_t_m": 0.0,
+        "direction": "opposite",
+        "policy": "accel_then_brake",
+        "params": {
+          "accel_mag": 0.8,
+          "accel_steps": 35,
+          "cruise_speed": 18.0,
+          "brake_step": 9999,
+          "brake_steps": 0,
+          "speed_kp": 0.12
+        },
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    ],
+    "agent_configs": {
+      "default_agent": {
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    }
+  },
+  "metrics": {
+    "min_ttc_s": 44.076175689697266,
+    "min_thw_s": 0.047545045614242554,
+    "min_gap_m": 0.39485231041908264,
+    "min_accel_mps2": -1.1937713623046875,
+    "frac_hard_brake": 0.0,
+    "max_abs_jerk_mps3": 11.937713623046875,
+    "frac_high_jerk": 0.008403361344537815,
+    "frac_stopped": 0.0,
+    "max_stop_streak_s": 0.0,
+    "osc_index": 0.27484502923976606,
+    "num_panic_brakes": 0,
+    "any_collision": false,
+    "collision_step": null,
+    "collision_vehicle": false,
+    "collision_object": false,
+    "min_euclid_dist_m": 40.13970947265625,
+    "min_time_dist": 119,
+    "n_steps": 119,
+    "dt": 0.1,
+    "map": "X",
+    "traffic_density": 0.05,
+    "lead_id": "ncp_red_light_runner",
+    "terminated": true,
+    "truncated": false,
+    "ego_turn": "straight",
+    "lead_turn": "straight",
+    "nav_module": "NodeNetworkNavigation",
+    "checkpoint_min_len": 4,
+    "ego_checkpoints_init": true,
+    "lead_checkpoints_init": true
+  }
+}

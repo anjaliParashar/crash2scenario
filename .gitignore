@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# local experiment outputs
+.env
+out_freq/
+generated/
+rollout/

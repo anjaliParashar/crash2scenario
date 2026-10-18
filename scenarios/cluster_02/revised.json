@@ -1,0 +1,88 @@
+{
+  "cluster_index": 2,
+  "road_type": "Intersection",
+  "sv_precrash": "Making Right Turn",
+  "cp_precrash": "Proceeding Straight",
+  "work_zone": "No",
+  "narrative": "On April [XXX], 2025 at 3:12 PM local time, the self-driving vehicle (SDV) approached a standard four-way signalized intersection in the right-turn lane intending to make a right turn onto the cross street. A crash-partner passenger vehicle was traveling proceeding straight through the intersection on the cross street (from the SDV\u2019s left to right). As the SDV began its right turn at low speed, the crash-partner vehicle continued straight at a moderate speed and closed the gap faster than expected. The SDV entered the near lane of the cross street while the crash-partner vehicle was still within the conflict zone, resulting in an angle impact in the intersection/near-corner area (front-right area of the SDV contacting the side/front-quarter of the crash-partner vehicle). No work zone activity was present.",
+  "stage": "revised",
+  "config": {
+    "map": "X",
+    "ego_turn": "right",
+    "lead_turn": "straight",
+    "traffic_density": 0.05,
+    "accident_prob": 0.0,
+    "steps": 320,
+    "render": {
+      "screen_size": [
+        700,
+        900
+      ],
+      "camera_position": [
+        60,
+        -54
+      ]
+    },
+    "vehicles": [
+      {
+        "id": "ncp_cross_straight_closing_fast",
+        "direction": "opposite",
+        "lane_offset": 0,
+        "delta_s_m": 9.0,
+        "delta_t_m": 0.0,
+        "policy": "accel_then_brake",
+        "params": {
+          "accel_mag": 1.15,
+          "accel_steps": 75,
+          "cruise_speed": 23.0,
+          "brake_step": 999,
+          "brake_steps": 1,
+          "brake_mag": 0.0,
+          "speed_kp": 0.14
+        },
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    ],
+    "agent_configs": {
+      "default_agent": {
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    }
+  },
+  "metrics": {
+    "min_ttc_s": Infinity,
+    "min_thw_s": 0.08706533163785934,
+    "min_gap_m": 0.7230541110038757,
+    "min_accel_mps2": -2.124967575073242,
+    "frac_hard_brake": 0.0,
+    "max_abs_jerk_mps3": 41.83206558227539,
+    "frac_high_jerk": 0.08904109589041095,
+    "frac_stopped": 0.0958904109589041,
+    "max_stop_streak_s": 1.4000000000000001,
+    "osc_index": 0.5127838884526548,
+    "num_panic_brakes": 0,
+    "any_collision": false,
+    "collision_step": null,
+    "collision_vehicle": false,
+    "collision_object": false,
+    "min_euclid_dist_m": 9.02119255065918,
+    "min_time_dist": 146,
+    "n_steps": 146,
+    "dt": 0.1,
+    "map": "X",
+    "traffic_density": 0.05,
+    "lead_id": "ncp_cross_straight_closing_fast",
+    "terminated": true,
+    "truncated": false,
+    "ego_turn": "right",
+    "lead_turn": "straight",
+    "nav_module": "NodeNetworkNavigation",
+    "checkpoint_min_len": 4,
+    "ego_checkpoints_init": true,
+    "lead_checkpoints_init": true
+  }
+}

@@ -1,0 +1,12 @@
+metadrive-simulator==0.4.3
+numpy
+pandas
+scikit-learn
+matplotlib
+sentence-transformers
+joblib
+openai
+python-dotenv
+imageio
+gymnasium
+Pillow

@@ -1,0 +1,88 @@
+{
+  "cluster_index": 17,
+  "road_type": "Intersection",
+  "sv_precrash": "Proceeding Straight",
+  "cp_precrash": "Proceeding Straight",
+  "work_zone": "No",
+  "narrative": "A self-driving vehicle (\u201cEgo AV\u201d) was proceeding straight through an intersection at a steady speed. A crash partner vehicle was also proceeding straight on the crossing street and approached the same intersection. As the Ego AV entered the intersection, the crash partner vehicle accelerated into the intersection and then braked late, reducing the available gap. The Ego AV applied braking to maintain a safe stopping distance, but the vehicles entered the conflict point at the same time and collided in the intersection (side-impact angle), with neither vehicle striking the other from behind and without a head-on approach.",
+  "stage": "revised",
+  "config": {
+    "map": "X",
+    "ego_turn": "straight",
+    "lead_turn": "straight",
+    "traffic_density": 0.0,
+    "accident_prob": 0.0,
+    "steps": 360,
+    "render": {
+      "screen_size": [
+        700,
+        900
+      ],
+      "camera_position": [
+        60,
+        -54
+      ]
+    },
+    "vehicles": [
+      {
+        "id": "cross_accel_late_brake_ncp",
+        "lane_offset": 0,
+        "delta_s_m": 12.0,
+        "delta_t_m": 0.0,
+        "policy": "accel_then_brake",
+        "params": {
+          "accel_mag": 2.5,
+          "accel_steps": 70,
+          "cruise_speed": 14.0,
+          "brake_step": 85,
+          "brake_steps": 30,
+          "brake_mag": 1.2,
+          "speed_kp": 0.15
+        },
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    ],
+    "cones": [],
+    "agent_configs": {
+      "default_agent": {
+        "vehicle_config": {
+          "navigation_module": "NodeNetworkNavigation"
+        }
+      }
+    }
+  },
+  "metrics": {
+    "min_ttc_s": 0.07756977528333664,
+    "min_thw_s": 0.07206535339355469,
+    "min_gap_m": 0.597377598285675,
+    "min_accel_mps2": -8.99470043182373,
+    "frac_hard_brake": 0.015267175572519083,
+    "max_abs_jerk_mps3": 60.36884307861328,
+    "frac_high_jerk": 0.09923664122137404,
+    "frac_stopped": 0.03816793893129771,
+    "max_stop_streak_s": 0.5,
+    "osc_index": 0.47086765314590473,
+    "num_panic_brakes": 0,
+    "any_collision": false,
+    "collision_step": null,
+    "collision_vehicle": false,
+    "collision_object": false,
+    "min_euclid_dist_m": 12.008844375610352,
+    "min_time_dist": 131,
+    "n_steps": 131,
+    "dt": 0.1,
+    "map": "X",
+    "traffic_density": 0.0,
+    "lead_id": "cross_accel_late_brake_ncp",
+    "terminated": true,
+    "truncated": false,
+    "ego_turn": "straight",
+    "lead_turn": "straight",
+    "nav_module": "NodeNetworkNavigation",
+    "checkpoint_min_len": 4,
+    "ego_checkpoints_init": true,
+    "lead_checkpoints_init": true
+  }
+}
